@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.EventSystems; // UI olayları için şart
+using UnityEngine.EventSystems;
 using Project.Core;
 
 public class MobileInput : MonoBehaviour, IInputProvider, IDragHandler, IPointerDownHandler, IPointerUpHandler

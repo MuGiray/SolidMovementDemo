@@ -1,7 +1,7 @@
 using UnityEngine;
 using Project.Core;
 
-[RequireComponent(typeof(Rigidbody))] // Bu scripti eklediğin objede Rigidbody olmak ZORUNDA kuralı
+[RequireComponent(typeof(Rigidbody))] // Bu scripti eklediğin objede Rigidbody olmak ZORUNDA
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed = 5f;
@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
         // Rigidbody bileşenini alıyoruz
         _rb = GetComponent<Rigidbody>();
 
-        // Input Provider kontrolü (Eski kodumuzla aynı)
+        // Input Provider kontrolü
         if (_inputProviderObject != null)
         {
             _inputProvider = _inputProviderObject.GetComponent<IInputProvider>();
@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
         // Eğer girdi yoksa işlem yapma
         if (_inputDirection == Vector3.zero) return;
 
-        // Mühendislik Notu: MovePosition, objeyi bir noktadan diğerine "ışınlamaz",
+        // Not: MovePosition, objeyi bir noktadan diğerine "ışınlamaz",
         // fizik motoruna "bir sonraki karede burada olmalı" der. 
         // Böylece arada duvar varsa motor bunu algılar ve durdurur.
         

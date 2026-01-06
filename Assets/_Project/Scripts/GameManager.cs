@@ -33,14 +33,12 @@ public class GameManager : MonoBehaviour
         if (_winPanel != null)
             _winPanel.SetActive(true);
             
-        // Oyunu durdurmak istersen zamanı dondurabilirsin (Opsiyonel)
         Time.timeScale = 0f; 
     }
 
     // Bu fonksiyonu butona bağlayacağız
     public void RestartGame()
     {
-        // Zamanı durdurduysan tekrar açmayı unutma
         Time.timeScale = 1f;
         
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
